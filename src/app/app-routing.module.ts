@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
@@ -30,8 +31,8 @@ const routes: Routes = [
   { path:'logoutusers',component:LogoutDoctorComponent,canActivate:[AuthGuarddoctorService] },
   { path:'projectoverview',component:ProjectoverviewComponent},
   { path:'aboutus',component:AboutusComponent},
-  { path:'contactus',component:ContactusComponent}
-
+  { path:'contactus',component:ContactusComponent},
+{path:'home',component:HomeComponent}
 ];
 
 

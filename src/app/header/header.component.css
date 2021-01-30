@@ -6,4 +6,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
+
+.section-header h2 {
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 5px 5px 5px gray;
+}

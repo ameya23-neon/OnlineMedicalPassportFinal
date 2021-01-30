@@ -22,6 +22,7 @@ import { LogoutDoctorComponent } from './logout-doctor/logout-doctor.component';
 import { ProjectoverviewComponent } from './projectoverview/projectoverview.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { ContactusComponent } from './contactus/contactus.component';
     ProjectoverviewComponent,
     AboutusComponent,
     ContactusComponent,
+    HomeComponent,
 
   ],
   imports: [

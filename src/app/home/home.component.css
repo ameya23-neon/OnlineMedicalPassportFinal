@@ -1,0 +1,13 @@
+.home-comp {
+    height: 300px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn {
+    margin: 20px;
+}
