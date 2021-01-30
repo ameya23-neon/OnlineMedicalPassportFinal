@@ -1,0 +1,47 @@
+<div class="col-md-6">
+    <h2 class="text-center">Add Doctor</h2>
+    <form>
+        <div class="form-group">
+          <label for="doctorsId">Doctors Id:</label>
+            <input [(ngModel)]="Doctor.doctorsId" placeholder="Doctor Id" name="Doctor_id" class="form-control" id="DoctorId">
+          </div>
+        <div class="form-group">
+            <label for="title">title:</label>
+            <input type="title" [(ngModel)]="Doctor.title" placeholder="Title" name="title" class="form-control" id="title">
+          </div>
+      <div class="form-group">
+        <label for="specialization">Specialization:</label>
+        <input type="specialization" [(ngModel)]="Doctor.specialization" placeholder="Specialization" name="specialization" class="form-control" id="specialization">
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="name" [(ngModel)]="Doctor.name" placeholder="Name" name="name" class="form-control" id="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" [(ngModel)]="Doctor.email" placeholder="Email" name="email" class="form-control" id="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="Doctor.password" placeholder="Password" name="password" class="form-control" id="password">
+      </div>
+      <div class="form-group">
+        <label for="hospitalname">Hopital Name:</label>
+        <input type="hospitalname" [(ngModel)]="Doctor.hospitalname" placeholder="Hospital Name" name="hospitalname" class="form-control" id="hospitalname">
+      </div>
+      <div class="form-group">
+        <label for="hospitalarea">Hopital Area:</label>
+        <input type="hospitalarea" [(ngModel)]="Doctor.hospitalarea" placeholder="Hospital Area" name="hospitalarea" class="form-control" id="hospitalarea">
+      </div>
+      <div class="form-group">
+        <label for="hospitalcity">Hopital City:</label>
+        <input type="hospitalcity" [(ngModel)]="Doctor.hospitalcity" placeholder="Hospital City" name="hospitalcity" class="form-control" id="hospitalcity">
+      </div>
+      <div class="form-group">
+        <label for="contactno">Contact No.:</label>
+        <input type="contactno" [(ngModel)]="Doctor.contactno" placeholder="Contact No." name="contactno" class="form-control" id="contactno">
+      </div>
+
+    <button class="btn btn-success" (click)="createDoctor()">Create</button>
+    </form>
+    </div>

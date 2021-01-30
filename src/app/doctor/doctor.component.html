@@ -1,0 +1,27 @@
+<div class="form-group row"></div>
+<div class="form-group row">
+  <label for="search" class="col-sm-2 col-form-label" style="text-align: right;">Search</label>
+  <div class="col-sm-6">
+
+  <input type="text" [(ngModel)]="searchValue" class="form-control" id="search" />
+</div>
+<div class="col-md-6">
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Doctor ID</th>
+      <th>name</th>
+      <th>email</th>
+      <th>contact no.</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let doc of DemoDoctors | searchfilter:searchValue">
+          <td><a [routerLink]='["/docterdetails"]'>{{doc.doctorsId}}</a></td>
+            <td>{{doc.email}}</td>
+            <td>{{doc.contactno}}</td>
+            <td><button class="btn btn-danger" (click)="deleteDoctor(DemoDoctors)"> Delete Doctor</button></td>
+            </tr>
+    </tbody>
+      </table>
+    </div>
