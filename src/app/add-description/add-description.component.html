@@ -1,0 +1,48 @@
+<section class="container">
+    <h2 class="text-center">Add Description</h2>
+    <form>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="text" [(ngModel)]="age" placeholder="age" name="age" class="form-control" id="age">
+        </div>
+        <div class="form-group">
+            <label for="">Height:</label>
+            <input type="text" [(ngModel)]="height" placeholder="height" name="height" class="form-control" id="height">
+        </div>
+        <div class="form-group">
+            <label for="oxygenLevel">oxygenLevel</label>
+            <input type="text" [(ngModel)]="oxygenLevel" placeholder="oxygenlevel" name="oxygenlevel" class="form-control" id="oxygenlevel">
+        </div>
+        <div class="form-group">
+            <label for="heartRate">heartrate</label>
+            <input type="text"  [(ngModel)]="heartRate" placeholder="heartrate" name="heartrate" class="form-control" id="heartrate">
+        </div>
+        <div class="form-group">
+            <label for="bloodPressure">bloodPressure</label>
+            <input type="text" [(ngModel)]="bloodPressure" placeholder="bloodPressure" name="bloodpresure" class="form-control" id="bloodpresure">
+            <div class="form-group">
+                <label for="allergies">allergies</label>
+                <input type="text" [(ngModel)]="allergies" placeholder="allergies" name="allergies" class="form-control" id="alleregies">
+            <div class="form-group">
+                    <label for="lastcheckupdate">lastcheckupdate:</label>
+                    <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" [(ngModel)]="lastcheckupdate" placeholder="lastcheckupdate" name="lastcheckupdate" class="form-control" id="lastcheckupdate">
+                </div>
+                <div class="form-group">
+                    <label for="upcomingcheckupdate">upcomingcheckupdate:</label>
+                    <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" [(ngModel)]="upcomingcheckupdate" placeholder="lastcheckupdate" name="lastcheckupdate" class="form-control" id="lastcheckupdate">
+                </div>
+                <div class="form-group">
+                    <label for="usersid">Users's ID:</label>
+                    <input type="number" [(ngModel)]="usersId" placeholder="usersid" name="usersid" class="form-control" id="usersid">
+                </div>
+  
+                <div class="form-group">
+                    <label for="doctorsid">Doctor's ID:</label>
+                    <input type="number" [(ngModel)]="doctorsId" placeholder="doctor's id" name="doctorsid" class="form-control" id="doctorsid">
+                </div>
+  
+                <button class="btn btn-success" (click)="createDescription()">AddDescription</button>
+            </div>
+        </div>
+    </form>
+  </section>

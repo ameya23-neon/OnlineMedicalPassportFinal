@@ -8,7 +8,21 @@ import { doctors } from '../service/http-client1.service';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  User: users=new users(1,"","","","","","","","","",1);
+
+
+  firstname:string
+  middlename:string
+  lastname:string
+  dateofbirth:string
+  bloodgroup:string
+  gender:string
+  contactno:string
+  email:string
+  password:string
+  doctorsId:number
+
+
+  //User: users=new users(1,"","","","","","","","","",1);
 
   constructor(private httpClientService: HttpClientService)
    
@@ -17,7 +31,24 @@ export class AddUserComponent implements OnInit {
   ngOnInit() {
   }
   createUser(): void{
-    this.httpClientService.createUser(this.User)
+    const User=
+    {
+           "firstname": this.firstname,
+           "middlename": this.middlename,
+           "lastname": this.lastname,
+           "email": this.email,
+           "password": this.password,
+           "contactno": this.contactno,
+           "gender": this.gender,
+           "bloodgroup": this.bloodgroup,
+           "dateofbirth": this.dateofbirth,
+               "selecteddoctor": {
+               "doctorsId": this.doctorsId
+            }
+             
+     }
+    console.log(User)
+    this.httpClientService.createUser(User)
     .subscribe(response=>
       {
         console.log(response)

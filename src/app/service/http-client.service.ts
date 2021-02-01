@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 export class users{
   constructor(
-    public user_id:number,
+    public usersId:number,
     public firstname:string,
     public middlename:string,
     public lastname:string,
@@ -13,7 +13,7 @@ export class users{
     public contactno:string,
     public email:string,
     public password:string,
-    public doctorsid:number
+    public doctorsId:number
     
   ){}
 }
@@ -30,14 +30,23 @@ export class HttpClientService {
       
       return this.httpClient.get<users[]>('http://localhost:8080/admin/users');
     }
-    public deleteUser(User) {
+    public deleteUser(usersId) {
      
-      return this.httpClient.delete<users>("http://localhost:8080/admin/users" + "/"+ User.user_id);
+      return this.httpClient.delete("http://localhost:8080/users/"+ usersId);
     }
   
     public createUser(User) {
       
       return this.httpClient.post<users>("http://localhost:8080/admin", User);
+    }
+    public updateUser(userId,user) {
+      
+      return this.httpClient.put<users>("http://localhost:8080/users/updateusers/"+ userId,user);
+    }
+
+    getUser(userId)
+    {    
+      return this.httpClient.get('http://localhost:8080/users/'+userId);
     }
   }
 

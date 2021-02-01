@@ -1,11 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationDoctorService {
 
-  constructor() { }
+  constructor(private httpClient:HttpClient) { }
   isUserLoggedIn() {
     let user = sessionStorage.getItem('username')
   console.log(!(user === null))
@@ -16,12 +18,8 @@ export class AuthenticationDoctorService {
 
     }
   authenticate(username: string, password: string) {
-    if (username === "user" && password === "user") {
-      sessionStorage.setItem('username', username)
-      return true;
-    } else {
-      return false;
-    }
+    const body={"email":username,"password":password}
+    return this.httpClient.post("http://localhost:8080/doctors/login",body)
   }
 
 }

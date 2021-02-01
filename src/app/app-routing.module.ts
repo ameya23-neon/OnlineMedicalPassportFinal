@@ -17,6 +17,11 @@ import { AddDoctorComponent } from './add-doctor/add-doctor.component';
 import { LogoutUserComponent } from './logout-user/logout-user.component';
 import { AuthGuarduserService } from './service/auth-guarduser.service';
 import { AuthGuarddoctorService } from './service/auth-guarddoctor.service';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { DoctordetailsComponent } from './doctordetails/doctordetails.component';
+import { AddDescriptionComponent } from './add-description/add-description.component';
 const routes: Routes = [
   {path:'users',component: UsersComponent},
   {path:'addusers',component: AddUserComponent},
@@ -32,7 +37,13 @@ const routes: Routes = [
   { path:'projectoverview',component:ProjectoverviewComponent},
   { path:'aboutus',component:AboutusComponent},
   { path:'contactus',component:ContactusComponent},
-{path:'home',component:HomeComponent}
+{path:'home',component:HomeComponent},
+{ path: '', redirectTo: '/home', pathMatch: 'full' },
+{path:'adminhome',component:AdminhomeComponent},
+{path:'updateuser/:id',component:UpdateuserComponent},
+{path:'userdetails',component:UserdetailsComponent},
+{path:'doctordeatails',component:DoctordetailsComponent},
+{path:'adddescription',component:AddDescriptionComponent}
 ];
 
 

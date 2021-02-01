@@ -7,6 +7,10 @@ import { doctors, HttpClient1Service } from '../service/http-client1.service';
   styleUrls: ['./add-doctor.component.css']
 })
 export class AddDoctorComponent implements OnInit {
+
+
+
+  
   Doctor: doctors = new doctors(1,"","","","","","","","",1);
   constructor(
     private httpClientService: HttpClient1Service

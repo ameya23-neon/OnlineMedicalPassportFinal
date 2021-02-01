@@ -18,13 +18,16 @@ export class LoginDoctorComponent implements OnInit {
   ngOnInit(): void {
   }
   checkLogin() {
-    if (this.loginservice.authenticate(this.username, this.password)
-    ) {
-      this.router.navigate([''])
-      this.invalidLogin = false
-    } else
-      this.invalidLogin = true
+     (this.loginservice.authenticate(this.username, this.password)
+     .subscribe( data => {
+      console.log(data["doctorsId"])
+     sessionStorage.setItem("doctordeatails",data["doctorsId"]);
+      this.router.navigate(['/doctordeatails'])
+     this.invalidLogin = false
+   })
+
+     
+   ) 
   }
-
-
 }
+{}

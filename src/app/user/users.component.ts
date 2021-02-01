@@ -1,5 +1,6 @@
 import { HttpClientService, users } from '../service/http-client.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -9,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
   Demousers:users[]
+  user
   searchValue:string;
   constructor(
-    private httpClientService:HttpClientService
+    private httpClientService:HttpClientService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -23,10 +26,16 @@ export class UsersComponent implements OnInit {
 {
   this.Demousers=response;
 }
-deleteUser(Demousers:users): void {
-  this.httpClientService.deleteUser(Demousers)
+deleteUser(user): void {
+  this.httpClientService.deleteUser(user.usersId)
   .subscribe(data=>{
-    this.Demousers=this.Demousers.filter(u => u !== Demousers);
+    alert("Successfully Deleted")
+    this.httpClientService.ListAllUsers().subscribe(
+      response=>this.handleSuccessfulResponse(response)
+    );
   })
+
+
+  
 };
 }

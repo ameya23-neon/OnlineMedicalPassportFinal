@@ -1,0 +1,52 @@
+<section class="container">
+    <h2 class="text-center">Update User</h2>
+    <form>
+        <div class="form-group">
+            <label for="UserId">User Id</label>
+            <input [(ngModel)]="userId" placeholder="User Id" name="User_id" class="form-control" id="UserId">
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="firstname" [(ngModel)]="firstname" placeholder="First Name" name="first_name" class="form-control" id="firstname">
+        </div>
+        <div class="form-group">
+            <label for="">Middle Name:</label>
+            <input type="middlename" [(ngModel)]="middlename" placeholder="Middle Name" name="middle" class="form-control" id="middlename">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name:</label>
+            <input type="lastname" [(ngModel)]="lastname" placeholder="Last Name" name="last_name" class="form-control" id="lastname">
+        </div>
+        <div class="form-group">
+            <label for="dateofbirth">Date Of Birth</label>
+            <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2015-08-09" [(ngModel)]="dateofbirth" placeholder="date of birth" name="date_of_birth" class="form-control" id="dateofbirth">
+        </div>
+        <div class="form-group">
+            <label for="bloodgroup">Blood Group</label>
+            <input type="bloodgroup" [(ngModel)]="bloodgroup" placeholder="blood group" name="blood_group" class="form-control" id="bloodgroup">
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="gender" [(ngModel)]="gender" placeholder="gender" name="gender" class="form-control" id="gender">
+                <div class="form-group">
+                    <label for="contactno">Contact Number:</label>
+                    <input type="contactno" [(ngModel)]="contactno" placeholder="contact no" name="contactno" class="form-control" id="contactno">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" [(ngModel)]="email" placeholder="email" name="email" class="form-control" id="email">
+                </div>
+
+               
+                <div class="form-group">
+                    <label for="doctorsid">Doctor's ID:</label>
+                    <input type="number" [(ngModel)]="doctorsId" placeholder="doctor's id" name="doctorsId" class="form-control" id="doctorsid">
+                </div>
+                <div>
+                    <button class="btn btn-success" (click)="updateUser()">Update</button>
+                   <!-- <button class="btn btn-warning" [routerLink]="../../users">Cancel</button>-->
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

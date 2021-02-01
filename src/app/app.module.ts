@@ -23,6 +23,13 @@ import { ProjectoverviewComponent } from './projectoverview/projectoverview.comp
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
+import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { DoctordetailsComponent } from './doctordetails/doctordetails.component';
+import { DescriptionComponent } from './description/description.component';
+import { AddDescriptionComponent } from './add-description/add-description.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +50,13 @@ import { HomeComponent } from './home/home.component';
     AboutusComponent,
     ContactusComponent,
     HomeComponent,
-
+    AdminhomeComponent,
+    UpdateuserComponent,
+    UserdetailsComponent,
+    DoctordetailsComponent,
+    DescriptionComponent,
+    AddDescriptionComponent,
+   
   ],
   imports: [
     BrowserModule,

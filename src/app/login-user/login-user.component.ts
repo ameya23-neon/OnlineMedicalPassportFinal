@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class LoginUserComponent implements OnInit {
 
+  
   username = 'javainuse'
   password = ''
   invalidLogin = false
@@ -18,12 +19,16 @@ export class LoginUserComponent implements OnInit {
   ngOnInit(): void {
   }
   checkLogin() {
-    if (this.loginservice.authenticate(this.username, this.password)
-    ) {
-      this.router.navigate([''])
+     (this.loginservice.authenticate(this.username, this.password)
+     .subscribe( data => {
+       console.log(data["usersId"])
+      sessionStorage.setItem("userdetails",data["usersId"]);
+       this.router.navigate(['/userdetails'])
       this.invalidLogin = false
-    } else
-      this.invalidLogin = true
-  }
-    
+    })
+
+      
+    ) 
+  } 
 }
+{}

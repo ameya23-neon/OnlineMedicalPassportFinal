@@ -20,6 +20,9 @@ export class doctors{
   providedIn: 'root'
 })
 export class HttpClient1Service {
+  post(arg0: string, body: { email: string; password: string; }) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor(
     private httpClient:HttpClient
@@ -31,11 +34,16 @@ export class HttpClient1Service {
     console.log("test call");
     return this.httpClient.get<doctors[]>('http://localhost:8080/admin/doctors');
   }
-  public deleteDoctor(doctors) {
-    return this.httpClient.delete<doctors>("http://localhost:8080/doctors" + "/"+ doctors.doctorsId);
+  public deleteDoctor(doctorsId) {
+    console.log(doctorsId)
+    return this.httpClient.delete("http://localhost:8080/doctors/" +doctorsId);
   }
 
   public createDoctor(doctors) {
     return this.httpClient.post<doctors>("http://localhost:8080/doctors", doctors);
+  }
+  getDoctor(doctorsId)
+  {    
+    return this.httpClient.get('http://localhost:8080/doctors/'+doctorsId);
   }
 }

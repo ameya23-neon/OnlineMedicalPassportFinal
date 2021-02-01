@@ -94,13 +94,14 @@
                         <ul class="dropdown-menu dropdown-menu-right fade-down">
                             <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/addusers"]'>Register User</a></li>
                             <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/adddoctors"]'>Register Doctor</a></li>
+                            <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/adddescription"]'>Add Description</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> View </a>
                         <ul class="dropdown-menu dropdown-menu-right fade-down">
                             <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/users"]'>View User</a></li>
-                            <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/users"]'> View Doctor </a></li>
+                           <li><a class="dropdown-item" *ngIf="loginService.isUserLoggedIn()" [routerLink]='["/doctors"]'> View Doctor </a></li>
                         </ul>
                     </li>
 
